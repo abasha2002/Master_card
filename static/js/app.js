@@ -50,22 +50,21 @@ CardForm.addEventListener('submit', function(event) {
     CardNumber.style.borderColor = '';
   }
 
-  if (!/^\d{2}$/.test(CardDate.value)) {
-    CardDateError.textContent = 'Woops! Wrong format, numbers only.';
-    CardDate.style.borderColor = 'red';
-    isValid = false;
-  }else{
-    CardDate.style.borderColor = '';
-    isValid = true;
-  }
-
   if (!/^[A-Za-z\s]+$/.test(CardName.value)) {
     CardNameError.textContent = 'Woops! Wrong format, letters only.';
     CardName.style.borderColor = 'red';
     isValid = false;
   } else {
     CardName.style.borderColor = '';
-    isValid = true;
+  }
+
+
+  if (!/^\d{2}$/.test(CardDate.value)) {
+    CardDateError.textContent = 'Woops! Wrong format, numbers only.';
+    CardDate.style.borderColor = 'red';
+    isValid = false;
+  }else{
+    CardDate.style.borderColor = '';
   }
 
   if (!/^\d{2}$/.test(CardDate1.value)) {
@@ -74,16 +73,14 @@ CardForm.addEventListener('submit', function(event) {
     isValid = false;
   }else{
     CardDate1.style.borderColor = '';
-    isValid = true;
   }
 
   if (!/^\d{3}$/.test(CardCVC.value)) {
-    CardDateError.textContent = 'Woops! Wrong format, numbers only.';
+    CardErrorError.textContent = 'Woops! Wrong format, numbers only.';
     CardCVC.style.borderColor = 'red';
     isValid = false;
   }else{
     CardCVC.style.borderColor = '';
-    isValid = true;
   }
 
   if (!isValid) {
