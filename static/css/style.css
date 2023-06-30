@@ -116,7 +116,6 @@ body{
 .second-part{
     display: flex;
     justify-content: flex-end;
-    align-items: center;
 }
 .error{
     color: #FE0000;
