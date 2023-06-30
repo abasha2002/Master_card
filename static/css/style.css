@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(../fonts/Inter-Regular.ttf);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+.gradient{
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.first-part, .second-part{
+    height: 100%;
+}
+.back{
+    position: absolute;
+    right: -200px;
+    top: 491px;
+}
+.front-side{
+    background-image: url(../images/card-front.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 447px;
+    position: absolute;
+    right: -100px;
+    top: 173px;
+    padding: 15px 24px 27px 23px;
+}
+.front-side strong{
+    color: #FFF;
+    font-size: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+.front-side p{
+    color: #FFF;
+    font-size: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.front-side span{
+    color: #FFF;
+    font-size: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.second-part label{
+    display: block;
+    color: #161616;
+    font-size: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+.second-part input{
+    border-radius: 10px;
+    border: 1px solid #C8C8C8;
+    background: #FFF;
+    background-color: white;
+    padding: 17px 12px;
+    
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    outline: 0;
+}
+::placeholder{
+    color: #F1F1F1;
+    font-size: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+#number, #name{
+    width: 515px;
+}
+#date, #date1{
+    width: 87px;
+}
+#CVC{
+    width: 258px;
+}
+#submit{
+    width: 515px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background: #610596;
+
+    color: #FFF;
+    font-size: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;    
+}
+.second-part{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.error{
+    color: #FE0000;
+    font-size: 13px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    position: absolute;
+    bottom: -20px;
+}
+.errors{
+    border-color: #C8C8C8 !important;
+}

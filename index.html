@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+    <section class="section1 container-fluid" style="height: 100%;">
+        <div class="row" style="height: 100%;">
+            <div class="col-md-5 first-part gradient position-relative">
+                <div class="front-side" style="border-radius: 10px;">
+                    <div class="d-flex align-items-center justify-content-between" style="width: 84px;">
+                        <div class="rounded-circle" style="background-color: #FFFFFF; width: 47px; height: 47px; border: none;"></div>
+                        <div class="rounded-circle" style="background-color: transparent; width: 20px; height: 20px; border: 1px solid white;"></div>
+                    </div>
+                    <div style="margin-top: 79px;">
+                        <strong>9591 6489 6321 1023</strong>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between" style="margin-top: 25px;">
+                        <p>Nick Monkey</p>
+                        <span>12/23</span>
+                    </div>
+                </div>
+                <img class="back" src="./static/images/card-back.png" alt="master-card back side">
+            </div>
+            <div class="col-md-7 second-part col-12">
+                <form style="margin-right: 114px;" id="form">
+                    <div class="position-relative">
+                        <label for="number">Card Number</label>
+                        <input type="text" placeholder="1234 3231 2341 2231" id="number" required>
+                        <p id="number-error" class="error"></p>
+                    </div>
+                    <div style="margin-top: 44px;" class="position-relative">
+                        <label for="name">Name</label>
+                        <input type="text" placeholder="Nick Monkey" id="name" required>
+                        <p id="name-error" class="error"></p>
+                    </div>
+                    <div>
+                        <div class="d-flex position-relative" style="margin-top: 42px; gap: 68px;">
+                            <div>
+                                <label for="date">Exp Date</label>
+                                <div class="d-flex" style="gap: 16px;">
+                                    <input type="text" placeholder="12" id="date" required>
+                                    <input type="text" placeholder="23" id="date1" required>
+                                </div>  
+                            </div>
+                            <div>
+                                <label for="CVC">CVC</label>
+                                <input type="text" placeholder="044" id="CVC" required>
+                            </div>
+                            <p id="date-error" class="error"></p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 54px;">
+                        <input type="submit" value="submit" id="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="./static/js/app.js"></script>
+</body>
+</html>
