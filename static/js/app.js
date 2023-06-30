@@ -76,7 +76,7 @@ CardForm.addEventListener('submit', function(event) {
   }
 
   if (!/^\d{3}$/.test(CardCVC.value)) {
-    CardErrorError.textContent = 'Woops! Wrong format, numbers only.';
+    CardDateError.textContent = 'Woops! Wrong format, numbers only.';
     CardCVC.style.borderColor = 'red';
     isValid = false;
   }else{
