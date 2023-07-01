@@ -11,26 +11,29 @@ const CardDateError = document.getElementById("date-error");
 
 
 CardNumber.addEventListener('input', function(event) {
-    const { value } = event.target;
-    const formattedValue = value.replace(/\s/g, '').replace(/(.{4})/g, '$1 ');
-    const truncatedValue = formattedValue.trim().slice(0, 19);
-    event.target.value = truncatedValue;
-  });
+  const { value } = event.target;
+  const formattedValue = value.replace(/\D/g, '');
+  const truncatedValue = formattedValue.slice(0, 16);
+  const spacedValue = truncatedValue.replace(/(.{4})(?!$)/g, '$1 ');
+  event.target.value = spacedValue;
+});
 
 CardDate.addEventListener('input', function(event) {
-    const { value } = event.target;
-    const formattedValue = value.replace(/\s/g, '').slice(0, 2);
-    event.target.value = formattedValue;
+  const { value } = event.target;
+  const formattedValue = value.replace(/\D/g, '').slice(0, 2);
+  event.target.value = formattedValue;
 });
+
 CardDate1.addEventListener('input', function(event) {
-    const { value } = event.target;
-    const formattedValue = value.replace(/\s/g, '').slice(0, 2);
-    event.target.value = formattedValue;
+  const { value } = event.target;
+  const formattedValue = value.replace(/\D/g, '').slice(0, 2);
+  event.target.value = formattedValue;
 });
-CardCVC.addEventListener('input', function(event){
-    const { value } = event.target;
-    const formattedValue = value.replace(/\s/g, '').slice(0, 3);
-    event.target.value = formattedValue;
+
+CardCVC.addEventListener('input', function(event) {
+  const { value } = event.target;
+  const formattedValue = value.replace(/\D/g, '').slice(0, 3);
+  event.target.value = formattedValue;
 });
 
 
@@ -43,7 +46,7 @@ CardForm.addEventListener('submit', function(event) {
 
   const mastercardNumbers = /^(?:\d{4}\s){3}\d{4}$/;
   if (!mastercardNumbers.test(CardNumber.value)) {
-    CardNumberError.textContent = 'Woops! Wrong format, numbers only.';
+    CardNumberError.textContent = 'Woops! Wrong format, fill the input please.';
     CardNumber.style.borderColor = 'red';
     isValid = false;
   }else{
@@ -60,7 +63,7 @@ CardForm.addEventListener('submit', function(event) {
 
 
   if (!/^\d{2}$/.test(CardDate.value)) {
-    CardDateError.textContent = 'Woops! Wrong format, numbers only.';
+    CardDateError.textContent = 'Woops! Wrong format, fill the input please.';
     CardDate.style.borderColor = 'red';
     isValid = false;
   }else{
@@ -68,7 +71,7 @@ CardForm.addEventListener('submit', function(event) {
   }
 
   if (!/^\d{2}$/.test(CardDate1.value)) {
-    CardDateError.textContent = 'Woops! Wrong format, numbers only.';
+    CardDateError.textContent = 'Woops! Wrong format, fill the input please.';
     CardDate1.style.borderColor = 'red';
     isValid = false;
   }else{
@@ -76,7 +79,7 @@ CardForm.addEventListener('submit', function(event) {
   }
 
   if (!/^\d{3}$/.test(CardCVC.value)) {
-    CardDateError.textContent = 'Woops! Wrong format, numbers only.';
+    CardDateError.textContent = 'Woops! Wrong format, fill the input please.';
     CardCVC.style.borderColor = 'red';
     isValid = false;
   }else{
