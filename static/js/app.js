@@ -98,8 +98,6 @@ CardCVC.addEventListener('input', function(event) {
 CardForm.addEventListener('submit', function(event) {
   let isValid = true;
 
-  CardNameError.textContent = '';
-
   const mastercardNumbers = /^(?:\d{4}\s){3}\d{4}$/;
   if (!mastercardNumbers.test(CardNumber.value)) {
     isValid = false;
